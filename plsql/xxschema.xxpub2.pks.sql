@@ -103,8 +103,8 @@ as
     )
   ;
 
-  g1number                         := null;
-  g2number                         := null;
+  g1number number                        := null;
+  g2number number                        := null;
 
   type fn4Rec is record (F1  number, F2  varchar2(32), F3  varchar2(1024));
   type fn4Tab is table of fn4Rec;
