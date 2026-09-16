@@ -48,7 +48,7 @@ To allow the default generated PL/SQL to be useable immediately by upstream code
 
 ## Advanced PL/SQL code
 
-The **PL/SQL code `xxschema."xxpub2"`** (found [here](plsql/Modeling-PLSQL-code-using-UML-classes/Returning-ref-cursors/xxschema.xxpub2.pkb.sql)) illustrates:
+The **PL/SQL code `xxschema."xxpub2"`** (see [spec](plsql/Modeling-PLSQL-code-using-UML-classes/Returning-ref-cursors/xxschema.xxpub2.pks.sql) and [body](plsql/Modeling-PLSQL-code-using-UML-classes/Returning-ref-cursors/xxschema.xxpub2.pkb.sql)) illustrates:
 
 - Well documented code, including samples of how to use each of the functions within the package specification.
 - The use of pipeline functions (see `fn4`)
