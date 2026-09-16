@@ -4,5 +4,5 @@
 
 This repo contains the html generated from a UML model.  Github only shows html sources, and does not render the html, so it is best viewed here:
 
-[View the model output](https://raw.githack.com/sco2012/model-plsql-code-with-uml/d6bd82cb8e1d99d59c5abc41b59a9a82a303a996/index.html)
+[View the model output](https://rawcdn.githack.com/sco2012/model-plsql-code-with-uml/0ae0a107caf5c986048b9beb42d0d08f0314a4db/html/index.html)
 
