@@ -45,7 +45,7 @@ To allow the default generated PL/SQL to be useable immediately by upstream code
 
 ### Getting the structure of the returned data correct
 
-A major source of errors when coding PL/SQL that returns refcursors, is getting the structure of the SQL correct - in order works, getting the order and type of fields exactly as the consuming code expects.  Being able to model this code significantly reduces the error rate of these codes.
+A major source of errors when coding PL/SQL that returns refcursors, is getting the structure of the SQL correct - in order words, getting the order and type of fields exactly as the consuming code expects.  Being able to model this code significantly reduces the error rate of these codes.
 
 
 ## Advanced PL/SQL code
