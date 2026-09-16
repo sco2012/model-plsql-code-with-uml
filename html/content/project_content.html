@@ -15,7 +15,7 @@
       <tr>
         <td width="1px"></td>
         <td width="300px">
-          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+          <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:780px">
             <tbody>
               <tr>
                 <td class="TableHeaderLine" colspan="4"></td>
@@ -41,7 +41,7 @@
               </tr>
             </tbody>
           </table>
-          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+          <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:780px">
             <tbody>
               <tr>
                 <td class="TableCellSpaceHolder1PxTall"></td>
@@ -51,7 +51,7 @@
               </tr>
             </tbody>
           </table>
-          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+          <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:780px">
             <tbody>
               <tr>
                 <td style="height: 3px"></td>
@@ -60,30 +60,37 @@
           </table>
 
           <!-- SSM manual edit starts -->
-          <p class="PageTitle">
-            <span id="PageTitleText">
-              Modeling PL/SQL code using UML classes
-            </span>
-          </p>
           <div class="TableContent" style="max-width:760px; font-size:16px;">
             <p>
-              UML classes provide a convenient way of modeling PL/SQL procedures, functions and packages.
+              Modeling PL/SQL with UML has the following advantages:
             </p>
             <p>
-              In complex environments, packages might be designed by a senior developer or architect, using UML
-              which can then serve as a specification for developers to develop the actual code.
+              - It allows the modeller (usually a designer, senior developer, or architect) to visualise the code.  
+              This is especially important with complex code bases, where ensuring proper interfacing is critical.
             </p>
             <p>
-              Furthermore, using the extension demonstrated, much of the PL/SQL code can be generated,
-              dramatically speeding up the development process. In this way, the designer can be concerned with how codes
-              interface with one another, whilst the developer can be concerned with implementing the code logic. Such a
-              separation of concerns is likely to lead to faster and cleaner development, with fewer errors.
+              - The modeller can give functional descriptions to every package, method and parameter, from which
+              a specification can be generated.
             </p>
+            <p>
+              - With a fully articulated specification, a code developer can proceed with coding without concerns
+              of ambiguity.  
+            </p>
+            <p>
+              - Modellers can focus on interfaces, whilst coders focus on code logic, achieving a separation of concerns
+              and reducing the chance of errors.
+            </p>
+            <p>
+              - Scafolding-code can be generated from the model (ie. the structure of the code, with the methods and parameters
+              correctly defined, with only core logic to be added).  The generated code includes the descriptions from
+              the model, making the code 'pre-documented'.
+            </p>
+
             <p>
               The remainder of this document steps through using UML to generate PL/SQL code.
             </p>
             <hr/>
-            <a href="../index.html?url=content/ClassDiagram_ngIyFWmD_AAAAQ3c.html">Next</a>
+            <a href="../index.html?url=content/ClassDiagram_ngIyFWmD_AAAAQ3c.html">[Next]</a>
 
           </div>
           <!-- SSM manual edit ends -->
