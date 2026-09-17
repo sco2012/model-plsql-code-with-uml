@@ -7,6 +7,8 @@ This repo demonstrates:
 
 1. Examples of **advanced (and well formed) Oracle PL/SQL** database packages.
 
+1. A visual-paradigm **extension** from which **PL/SQL code is generated** from UML class diagrams.
+
 ## Modeling PL/SQL with UML classes
 
 This repo contains the **html generated from a UML model**.  Github only shows html sources, and does not render the html, so it is best viewed here:
@@ -30,3 +32,14 @@ The **PL/SQL code `xxschema."xxpub2"`** (see [spec](plsql/Modeling-PLSQL-code-us
 - The use of record types.
 - Modularisation: `fn4RefC` returns a refcursor, and `fn4` takes a refcursor as its input.  A Java client (eg. an app) can handle weekly-typed data, such as from `fn4Rec`, but SQL client (eg. a separate database package) requires a strongly-typed return type, which is what `fn4` provides, whilst reusing the SQL imbebbed within `fn4Rec`.  Thus, the underlying query does not have to be implemented in two separate pieces of code.
 
+## Visual-paradigm extension to generate PL/SQL
+
+visual-paradigm is a commercial UML tool, coded with Java.  It provides for Java extensions to be coded, which can be invoked from a context menu
+
+![Context sensitive menu](./html/images/md-imgs/image.png)
+
+When activated, the extension shows a modal window, from which the generated code can be inspected and copied.
+
+![PL/SQL code generator window](./html/images/md-imgs/image-1.png)
+
+Go to the [source](./OraDbCodeGen-4.2)
