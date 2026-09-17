@@ -1,0 +1,37 @@
+<plugin
+        id="{PlsqlPackageGen}"
+        name="{PlsqlPackageGen}"
+        description="Create PL/SQL packages from Class Models. To create a function that returns
+        a ref cursors (an approximation of a parameterized view), model a class, called here dbpk1, 
+        that contains an operation (called here gd1) that returns a class, calle here Proc1RecType.  
+        Proc1RecType must have the stereotype 'OracleDbRecType' (create such a stereotype, if needed).  
+        The outcome is a set of procs within a PL/SQL database package, named according to the class name, 
+        that can be called in the form:
+
+        select
+                *
+        from
+                schem.dbpk1.gd1(
+                    schem.util.gd1RefC(
+                            p1 => ??, p2 => ??
+                    )
+                );        
+        "
+        provider="SCO"
+        class="vpplugins.packagespecgenerator.main.Main">
+<actionSets>
+        <contextSensitiveActionSet id="{PlsqlPackageGen}.ActionSet">
+            <contextTypes all="false">
+                <include type="Class"/>
+                <!-- ignored when contextTypes.all = true -->
+            </contextTypes>
+            <action
+                    id="{PlsqlPackageGen}.actions.PackageCreatorActionController"
+                    label="{PlsqlPackageGen}"
+                    style=""
+                    menuPath="OpenSpecification">
+                <actionController class="vpplugins.packagespecgenerator.actions.PackageCreatorActionController"/>
+            </action>
+        </contextSensitiveActionSet>
+    </actionSets>
+</plugin>
