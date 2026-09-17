@@ -42,4 +42,6 @@ When activated, the extension shows a modal window, from which the generated cod
 
 ![PL/SQL code generator window](./html/images/md-imgs/image-1.png)
 
-Go to the [source](./OraDbCodeGen-4.2)
+Go to the [source](https://github.com/sco2012/model-plsql-code-with-uml/tree/main/OraDbCodeGen-v4.2)
+
+
