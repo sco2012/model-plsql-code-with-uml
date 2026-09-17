@@ -55,5 +55,5 @@ The **PL/SQL code `xxschema."xxpub2"`** (see [spec](plsql/Modeling-PLSQL-code-us
 - Well documented code, including samples of how to use each of the functions within the package specification.
 - The use of pipeline functions (see `fn4`).
 - The use of record types.
-- Modularisation: `fn4RefC` returns a refcursor, and `fn4` takes a refcursor as its input.  A Java client (eg. an app) can handle loosely bound data types, such as from `fn4Rec`, but SQL client (eg. a separate database package) requires a tightly bound return type, which is what `fn4` provides, whilst reusing the SQL imbebbed within `fn4Rec`.  Thus, the underlying query does not have to be implemented in two separate pieces of code.
+- Modularisation: `fn4RefC` returns a refcursor, and `fn4` takes a refcursor as its input.  A Java client (eg. an app) can handle weekly-typed data, such as from `fn4Rec`, but SQL client (eg. a separate database package) requires a strongly-typed return, which is what `fn4` provides, whilst reusing the SQL imbebbed within `fn4Rec`.  Thus, the underlying query does not have to be implemented in two separate pieces of code.
 

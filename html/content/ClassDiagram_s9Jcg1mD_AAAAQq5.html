@@ -153,13 +153,26 @@
       <tbody>
         <tr>
           <td class="TableContent">
-            <img class="Image" height="512" id="diagram" src="../images/Returning_ref_cursors_part_2.png"
-              usemap="#diagram_map" width="807"> <map id="diagram_map" name="diagram_map"></map>
+            <img class="Image" width="900" id="diagram" src="../images/Returning_ref_cursors_part_2.png"
+              usemap="#diagram_map" > <map id="diagram_map" name="diagram_map"></map>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
+
+    <!-- SSM manual edit starts -->
+    <div class="TableContent" style="max-width:760px; font-size:16px;">
+      <p>
+        The generated code stub shows PL/SQL to process records one at a time.  Languages such as Java, Python, Go and 
+        most others, have constructs to iterate over data returned from ref-cursors.  PL/SQL requires strongly-typed 
+        data, which is handled by the vRow variable, which is a record-type corresponding, to the model:
+      </p>
+      <p>
+        <span style="font-family: 'Courier New', Courier, monospace;">type fn4Rec is record (F1 number, F2 varchar2(32), F3 varchar2(1024));</span>
+      </p>
+    </div>
+    <!-- SSM manual edit ends -->       
 
 
   <!-- SSM manual edit starts -->

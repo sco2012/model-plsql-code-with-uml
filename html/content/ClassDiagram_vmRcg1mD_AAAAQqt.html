@@ -149,6 +149,24 @@
       onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),hideLinkPopup(),hideReferencedBys();"
       style="position: absolute; top: 0; left: 0; z-index: 20;" width="100%">
     </table>
+
+    <!-- SSM manual edit starts -->
+    <div class="TableContent" style="max-width:760px; font-size:16px;">
+      <p>
+        One more benefit to point out, is the way in which ref_cursors are handled.
+      </p>
+      <p>
+        A primary use-cases for database packages, is to encapsulate query logic, allowing other systems to fetch data-sets 
+        without having to expose the SQL underlying them.  This is most commonly done by returning a ref-cursor from which 
+        the consuming system can select.
+       </p>
+       <p>
+        Consider the model below.  The <span style="font-family: 'Courier New', Courier, monospace;">xxschema.xxpub2.fn4</span> function is modeled to return a specifically structured set of data, 
+        whilst <span style="font-family: 'Courier New', Courier, monospace;">xxschema.xxpub2.fn5</span> returns a separate data structure.
+      </p>
+    </div>
+    <!-- SSM manual edit ends -->    
+
     <table border="0" cellpadding="0" cellspacing="0" style="position: relative; top: 24;" width="100%">
       <tbody>
         <tr>
@@ -187,6 +205,17 @@
         </tr>
       </tbody>
     </table>
+
+    <!-- SSM manual edit starts -->
+    <div class="TableContent" style="max-width:760px; font-size:16px;">
+      <p>
+        The resulting generated code provides several options with which one can return the above data-set.  The syntax and 
+        use-case for each of the ways is included in the generated database package specification. An extract of the generated 
+        code for the modeled function <span style="font-family: 'Courier New', Courier, monospace;">fn4</span> is shown, illustrating the various methods (the full generated code is too large to 
+        include in full here):
+      </p>
+    </div>
+    <!-- SSM manual edit ends -->        
   </div>
 
   <!-- SSM manual edit starts -->
