@@ -32,8 +32,6 @@
   </div>
   <!-- SSM manual edit ends -->
 
-
-
     <table border="0" cellpadding="0" cellspacing="0" style="position: relative; top: 24;" width="100%">
       <tbody>
         <tr>
@@ -55,10 +53,45 @@
         </tr>
         <tr>
           <td class="TableContent">
-            <img class="Image"  id="diagram"
-              src="../images/Simple_standalone_functions_and_procs_part_3-2.png" usemap="#diagram_map" width="777"> <map
-              id="diagram_map" name="diagram_map"></map>
-          </td>
+
+<pre style="background-color:white">
+  <span style="color:green">-- pr1</span>
+  <span style="color:blue">create or replace procedure</span>
+    prl (
+      <span style="color:green">/*
+        Functional description of pri
+      */</span>
+          p1                             <span style="color:blue">number</span>     <span style="color:green">--Description of parameter pl</span>
+        , p2                             <span style="color:blue">number</span>     <span style="color:green">--Description of parameter p2</span>
+  <span style="color:blue">is </span>
+    <span style="color:blue">begin</span>
+      <span style="color:green">-- TODO: Implementation goes here</span>
+      <span style="color:blue">null;</span>
+    <span style="color:blue">end;</span>
+
+</pre>
+
+<pre style="background-color:white">
+  <span style="color:blue">create or replace function</span>
+    fn1 (
+      <span style="color:green">/*
+        Functional description of fn1.
+      */</span>
+          p1                                 <span style="color:blue">number</span>   <span style="color:green">--Description of parameter p1</span>
+        , p2                                 <span style="color:blue">number</span> <span style="color:green">  --The descriptions of arguments may also get long. The
+                                                      --code generator handles this by implementing wrapping,
+                                                      --including maintaining indentation.  </span>
+        , p3                                 <span style="color:blue">varchar2</span>
+    )
+      <span style="color:blue">return 
+        number
+  is 
+    begin</span>
+      <span style="color:green">-- TODO: Implementation goes here </span>
+      <span style="color:blue">return null:
+    end;</span>
+</pre>
+            </td>
         </tr>
       </tbody>
     </table>

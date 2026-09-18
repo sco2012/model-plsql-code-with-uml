@@ -27,10 +27,11 @@
     <p>
       A developer might create a query such as:
     </p>
-    <p>
-      &nbsp;&nbsp;<span style="font-family: 'Courier New', Courier, monospace;"><span style="color:blue">select</span>
-        f1, f2, f3 <span style="color:blue" from>select</span> xview <span style="color:blue">where</span> f4=123</span>
-    </p>
+      <div style="max-width:720px;">
+      <pre style="background-color:#7eadd938">
+  <span style="color:blue">select</span> f1, f2, f3 <span style="color:blue">from</span> xview <span style="color:blue">where</span> f4=123</pre>
+      </div>
+
     <p>
       But exposing <span style="font-family: 'Courier New', Courier, monospace;">f4</span> might lead to
       unintended uses. For example, a developer might be tempted to join on the <span
@@ -49,11 +50,11 @@
       A better solution would be to be able to execute a query such as:
     </p>
     <p>
-      &nbsp;&nbsp;
-      <span style="font-family: 'Courier New', Courier, monospace;">
-        <span style="color:blue">select</span> f1, f2, f3 <span style="color:blue">from</span></span> <span
-        style="color:red">xview_pv</span>(123)
-      </span>
+      <div style="max-width:720px;">
+        <pre style="background-color:#7eadd938">
+  <span style="color:blue">select</span> f1, f2, f3 <span style="color:blue">from</span></span> <span
+        style="color:red">xview_pv</span>(123)</pre>
+      </div>
     </p>
     <p>
       Where <span style="font-family: 'Courier New', Courier, monospace;">xview_pv</span> would be a parameterized view.
@@ -77,39 +78,23 @@
   </div>
   <!-- SSM manual edit ends -->
 
-  <div style="font-family: 'Courier New', Courier, monospace; background-color: #7eadd938;max-width:720px;">
-    <p>
-      &nbsp;&nbsp;<span style="color:blue; font-weight: bold;">
-        select
-      </span>
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*
-    </p>
-    <p>
-      &nbsp;&nbsp;<span style="color:blue; font-weight: bold;">
-        from
-      </span>
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xxschema.xxpub2.<span style="color:rgb(255, 85, 0)">fn4</span>(
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xxschema.xxpub2.<span
-        style="color:rgb(255, 85, 0)">fn4RefC</span>(
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p1 => ??, p2 => ??
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
-    </p>
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
-    </p>
+
+  <!-- SSM manual edit starts -->
+
+  <div style="max-width:720px;">
+    <pre style="background-color:#7eadd938">
+    <span style="color:blue">select</span>
+          *
+    <span style="color:blue">from</span>
+          xxschema.xxpub2.<span style="color:red">fn4</span>(
+            xxschema.xxpub2.<span style="color:red">fn4RefC</span>(
+              p1 => ??, p2 => ??
+            )
+          )</pre>
   </div>
 
   </div>
+  <!-- SSM manual edit ends -->
 
   <!-- SSM manual edit starts -->
   <div class="TableContent" style="max-width:760px; font-size:16px;">
