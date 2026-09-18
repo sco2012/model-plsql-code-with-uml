@@ -6,7 +6,7 @@ This folder holds the PL/SQL code generated from the models illustrated here:
    link1
 </a>
 or
-<a  href="https://rawcdn.githack.com/sco2012/model-plsql-code-with-uml/9b1ecd5a07eb2f1fbb60b646443db55570ea7deb/html/index.html" target="_blank">
+<a  href="https://rawcdn.githack.com/sco2012/model-plsql-code-with-uml/07b9ca56c75fd91c3ef3005b0448e50bea41ff60/html/index.html" target="_blank">
    link2
 </a>
 
