@@ -59,32 +59,53 @@
             </tbody>
           </table>
 
+
+
+
           <!-- SSM manual edit starts -->
           <div class="TableContent" style="max-width:760px; font-size:16px;">
             <p>
-              Modeling PL/SQL with UML has the following advantages:
+              <span style="font-weight: bold;">
+                Modeling PL/SQL with UML
+              </span>
             </p>
             <p>
-              - It allows the modeller (usually a designer, senior developer, or architect) to visualise the code.  
-              This is especially important with complex code bases, where ensuring proper interfacing is critical.
+              A code model is a representation of a code-base, abstracting away details, such as the detailed code logic. 
+              UML is an excellent standard with which to model almost any code, and works well for Oracle database
+              code objects (packages, functions and procedures).
+            </p>
+            <img class="Image" id="diagram" src="../images/md-imgs/class-1.png" width="360">
+            <div style="font-style: italic;">A UML Class, modeling a database code object</div>
+            <p>
+              With a UML model of a code-base, a modeler (usually a designer, senior developer, or architect) can consider an abstracted 
+              representation of the code, allowing them to focus on issues such as how code objects should interface with one another, 
+              and what code to change or extend.
             </p>
             <p>
-              - The modeller can give functional descriptions to every package, method and parameter, from which
-              a specification can be generated.
+              A well articulated model will include descriptions captured at package, method and parameter level, with those descriptions providing 
+              enough technical and functional detail that one can assimilate, at a high level, what the purpose of each code object
+              is.
             </p>
             <p>
-              - With a fully articulated specification, a code developer can proceed with coding without concerns
-              of ambiguity.  
+              All UML tools provide for functionality to view UML diagrams.  Better UML tools will also provide functionality for some form of 
+              model detail to be generated from a UML model (since not all details are shown visually on UML diagrams, such as element descriptions).
+              Such model detail can serve as a specificiation for a developer:
+            </p>
+            <img class="Image" id="diagram" src="../images/md-imgs/spec-1.png" width="520">
+            <div style="font-style: italic;">A model detail generated from a UML class, that can serve as a specification for a developer</div>
+            <p>
+              One way to develop code is with a <span style="font-weight: bold;">model-first approach</span>.  With a model-first approach, a modeler considers what each
+              piece of code should do, in advance of any code being written.  This approach generally results in better conceptualized
+              code, with fewer pieces of code needing to be later refactored, because codes do not work together.
             </p>
             <p>
-              - Modellers can focus on interfaces, whilst coders focus on code logic, achieving a separation of concerns
-              and reducing the chance of errors.
+              <span style="font-weight: bold;">Of more value though</span>, with a model-first approach, is the possiblity to 
+              <span style="font-weight: bold;">generate scafolding-code</span> (the boiler-plate portions of the code) from the model,
+              reducing the amount of code that needs to be hand-written, and also transferring documentation (descriptions) from
+              the model to the code:
             </p>
-            <p>
-              - Scafolding-code can be generated from the model (ie. the structure of the code, with the methods and parameters
-              correctly defined, with only core logic to be added).  The generated code includes the descriptions from
-              the model, making the code 'pre-documented'.
-            </p>
+            <img class="Image" id="diagram" src="../images/md-imgs/code-1.png" width="600">
+            <div style="font-style: italic;">A sample of scafolding-code generated from a UML class</div>
 
             <p>
               The remainder of this document steps through using UML to generate PL/SQL code.
