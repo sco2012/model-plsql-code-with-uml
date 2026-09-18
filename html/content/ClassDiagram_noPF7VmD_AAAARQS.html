@@ -18,43 +18,45 @@
       Simple standalone functions and procs, part 3</span></p>
   <div style="position: relative; padding-bottom: 20px;">
 
-  <!-- SSM manual edit starts -->
-  <p class="PageTitle">
-    <span id="PageTitleText">
-      Modeling PL/SQL code using UML classes
-    </span>
-  </p>
-  <div class="TableContent" style="max-width:760px; font-size:16px;">
-    <p>
-      Now to generate some code.  A plug-in extension has been developed for the visual-paradigm modeling tool.  It allows code to 
-      be generated from within the modeling tool via a context menu.
+    <!-- SSM manual edit starts -->
+    <p class="PageTitle">
+      <span id="PageTitleText">
+        Modeling PL/SQL code using UML classes
+      </span>
     </p>
-  </div>
-  <!-- SSM manual edit ends -->
+    <div class="TableContent" style="max-width:760px; font-size:16px;">
+      <p>
+        Now to generate some code. A plug-in extension has been developed for the visual-paradigm modeling tool. It
+        allows code to
+        be generated from within the modeling tool via a context menu.
+      </p>
+    </div>
 
     <table border="0" cellpadding="0" cellspacing="0" style="position: relative; top: 24;" width="100%">
       <tbody>
         <tr>
           <td class="TableContent">
-            <img class="Image"  id="diagram"
-              src="../images/Simple_standalone_functions_and_procs_part_3-1.png" usemap="#diagram_map" width="777"> <map
-              id="diagram_map" name="diagram_map"></map>
-
-
-            <!-- SSM manual edit starts -->
-            <div class="TableContent" style="max-width:760px; font-size:16px;">
-              <p>
-                Following is the generated code for each of the UML classes from <span style="font-style: italic;">step 1</span>:
-              </p>
-            </div>
-            <!-- SSM manual edit ends -->
-
-            </td>
+            <img class="Image" id="diagram" src="../images/Simple_standalone_functions_and_procs_part_3-1.png"
+              usemap="#diagram_map" width="777"> <map id="diagram_map" name="diagram_map"></map>
+          </td>
         </tr>
-        <tr>
-          <td class="TableContent">
+      </tbody>
+    </table>
 
-<pre style="background-color:white">
+    <div class="TableContent" style="max-width:760px; font-size:16px;">
+      <p>
+        Following is the generated code for <span style="font-family: 'Courier New', Courier, monospace;">pr1</span>
+        (from <span style="font-style: italic;">step 1</span>), followed by its model detail (ie. specification), for
+        comparison:
+      </p>
+    </div>
+
+    </td>
+    </tr>
+    <tr>
+      <td class="TableContent">
+
+        <pre style="background-color:white">
   <span style="color:green">-- pr1</span>
   <span style="color:blue">create or replace procedure</span>
     prl (
@@ -70,8 +72,16 @@
     <span style="color:blue">end;</span>
 
 </pre>
+        <img class="Image" src="../images/md-imgs/spec-2.png" width="400">
 
-<pre style="background-color:white">
+        <div class="TableContent" style="max-width:760px; font-size:16px;">
+          <p>
+            And now the generated code for <span style="font-family: 'Courier New', Courier, monospace;">fn1</span>
+            (from <span style="font-style: italic;">step 1</span>), followed by its model detail, for comparison:
+          </p>
+        </div>
+
+        <pre style="background-color:white">
   <span style="color:blue">create or replace function</span>
     fn1 (
       <span style="color:green">/*
@@ -91,21 +101,27 @@
       <span style="color:blue">return null:
     end;</span>
 </pre>
-            </td>
-        </tr>
-      </tbody>
-    </table>
 
-  </div>
 
-  <!-- SSM manual edit starts -->
-  <div class="TableContent" style="max-width:760px; font-size:16px;">
-    <hr />
-    <a href="../index.html?url=content/project_content.html">[Home]</a>    
-    <a href="../index.html?url=content/ClassDiagram_HlHF7VmD_AAAARQE.html">[Back]</a>
-    <a href="../index.html?url=content/ClassDiagram_cI517VmD_AAAARVf.html">[Next]</a>
-  </div>
-  <!-- SSM manual edit ends -->
+        <div class="TableContent" style="max-width:760px; font-size:16px;">
+
+          <img class="Image" src="../images/md-imgs/spec-3.png" width="800">
+
+        </div>
+
+
+        <!-- SSM manual edit ends -->
+
+
+
+        <!-- SSM manual edit starts -->
+        <div class="TableContent" style="max-width:760px; font-size:16px;">
+          <hr />
+          <a href="../index.html?url=content/project_content.html">[Home]</a>
+          <a href="../index.html?url=content/ClassDiagram_HlHF7VmD_AAAARQE.html">[Back]</a>
+          <a href="../index.html?url=content/ClassDiagram_cI517VmD_AAAARVf.html">[Next]</a>
+        </div>
+        <!-- SSM manual edit ends -->
 
 
 </body>
