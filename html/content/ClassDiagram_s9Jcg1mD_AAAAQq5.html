@@ -16,41 +16,66 @@
 
   <p class="PageTitle"><span id="PageTitleText">
       Returning ref_cursors, part 2</span></p>
-  <div style="position: relative; padding-bottom: 20px;">
-    <table border="0" cellpadding="0" cellspacing="0"
-      onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),hideLinkPopup(),hideReferencedBys();"
-      style="position: absolute; top: 0; left: 0; z-index: 20;" width="100%">
-    </table>
-    <table border="0" cellpadding="0" cellspacing="0" style="position: relative; top: 24;" width="100%">
-      <tbody>
-        <tr>
-          <td class="TableContent">
-            <img class="Image" width="900" id="diagram" src="../images/Returning_ref_cursors_part_2.png"
-              usemap="#diagram_map" > <map id="diagram_map" name="diagram_map"></map>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
 
-    <!-- SSM manual edit starts -->
-    <div class="TableContent" style="max-width:760px; font-size:16px;">
-      <p>
-        The generated code stub shows PL/SQL to process records one at a time.  Languages such as Java, Python, Go and 
-        most others, have constructs to iterate over data returned from ref-cursors.  PL/SQL requires strongly-typed 
-        data, which is handled by the vRow variable, which is a record-type corresponding, to the model:
-      </p>
-      <p>
-        <span style="font-family: 'Courier New', Courier, monospace;">type fn4Rec is record (F1 number, F2 varchar2(32), F3 varchar2(1024));</span>
-      </p>
-    </div>
-    <!-- SSM manual edit ends -->       
+  <div class="TableContent" style="max-width:760px; font-size:16px;">
+    <p>
+      <span style="font-weight: bold;">
+        Method #1: Iteratively processing a data-set
+      </span>
+    </p>
+  </div>
+  <pre style="background-color:white">
+
+
+        <span style="color:green">Returns a ref-cursor, which when executed returns records in the form ::
+
+        COLUMN                        TYPE          DESCRIP
+        ----------------------------  ------------  --------------------------------
+        F1                            (Integer)
+        F2                            (String)
+        F3                            (String)
+
+        Following is an example of calling this function in PL/SQL ::</span>
+
+        <span style="color:blue">declare</span>
+          vRow xxschema."xxpub2".fn4Rec
+          vCursor <span style="color:blue">sys_refcursor</span>;
+        <span style="color:blue">begin</span>
+          pCursor :=
+                fn4RefC (
+                    p1 => ??
+                  , p2 => ??
+                );
+          <span style="color:blue">loop</span>
+              <span style="color:blue">fetch</span> pCursor <span style="color:blue">into</span> vRow;
+              <span style="color:blue">exit when</span> pCursor<span style="color:blue">%notfound</span>;
+              <span style="color:green">-- Do useful stuff</span>
+          <span style="color:blue">end loop;
+          close</span> pCursor;
+        <span style="color:blue">end;</span>    
+
+</pre>
+
+  <!-- SSM manual edit starts -->
+  <div class="TableContent" style="max-width:760px; font-size:16px;">
+    <p>
+      The generated code stub shows PL/SQL to process records one at a time. Languages such as Java, Python, Go and
+      most others, have constructs to iterate over data returned from ref-cursors. PL/SQL requires strongly-typed
+      data, which is handled by the vRow variable, which is a record-type corresponding, to the model:
+    </p>
+    <p>
+      <span style="font-family: 'Courier New', Courier, monospace;"><span style="color:blue">type</span> fn4Rec <span
+          style="color:blue">is record</span> (F1 <span style="color:blue">number</span>, F2 <span
+          style="color:blue">varchar2(32)</span>, F3 <span style="color:blue">varchar2(1024)</span>);</span>
+    </p>
+  </div>
+  <!-- SSM manual edit ends -->
 
 
   <!-- SSM manual edit starts -->
   <div class="TableContent" style="max-width:760px; font-size:16px;">
     <hr />
-    <a href="../index.html?url=content/project_content.html">[Home]</a>        
+    <a href="../index.html?url=content/project_content.html">[Home]</a>
     <a href="../index.html?url=content/ClassDiagram_vmRcg1mD_AAAAQqt.html">[Back]</a>
     <a href="../index.html?url=content/ClassDiagram_y25cg1mD_AAAAQrH.html">[Next]</a>
   </div>

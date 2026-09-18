@@ -17,10 +17,6 @@
   <p class="PageTitle"><span id="PageTitleText">
       More complex models, part 2</span></p>
   <div style="position: relative; padding-bottom: 20px;">
-    <table border="0" cellpadding="0" cellspacing="0"
-      onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),hideLinkPopup(),hideReferencedBys();"
-      style="position: absolute; top: 0; left: 0; z-index: 20;" width="100%">
-    </table>
 
     <!-- SSM manual edit starts -->
     <div class="TableContent" style="max-width:760px; font-size:16px;">
@@ -30,27 +26,81 @@
     </div>
     <!-- SSM manual edit ends -->
 
-    <table border="0" cellpadding="0" cellspacing="0" style="position: relative; top: 24;" width="100%">
-      <tbody>
-        <tr>
-          <td class="TableContent">
-            <img class="Image"  width="900" id="diagram" src="../images/More_complex_models_part_2-1.png"
-              usemap="#diagram_map"> <map id="diagram_map" name="diagram_map"></map>
-          </td>
-        </tr>
-        <tr>
-          <td class="TableContent">
-            <div class="TableContent" style="max-width:760px; font-size:16px;">
-              <p>
-                The function <span style="font-family: 'Courier New', Courier, monospace;">fn3</span> is not public, so it appears only in the body:
-              </p>
-            </div>
-            <img class="Image"  width="900" id="diagram" src="../images/More_complex_models_part_2-2.png"
-              usemap="#diagram_map"> <map id="diagram_map" name="diagram_map"></map>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <pre>
+    <span style="color:blue">create or replace package</span> xxschema."xxpub"
+    <span style="color:blue">as</span>
+          <span style="color:green">/*
+            Some description of the package's purpose
+          */</span>
+
+
+
+
+      <span style="color:green">-- pr3</span>
+      <span style="color:blue">procedure</span>
+        pr3 (
+          <span style="color:green">/*
+            Functional description of pr3.
+          */</span>
+              p1                                          <span style="color:blue">number</span>    <span style="color:green">--Description of parameter p1</span>
+            , p2                                          <span style="color:blue">number</span>    <span style="color:green">--Description of parameter p2</span>
+        )
+      ;
+
+    <span style="color:blue">end;</span>
+    /
+        </pre>
+
+        <div class="TableContent" style="max-width:760px; font-size:16px;">
+          <p>
+            The function <span style="font-family: 'Courier New', Courier, monospace;">fn3</span> is not public, so it appears only in the body:
+          </p>
+        </div>
+
+        <pre>
+    <span style="color:blue">create package body xxschema."xxpub"
+    as</span>
+
+
+      <span style="color:green">-- pr3</span>
+      <span style="color:blue">procedure
+        pr3 (</span>
+          <span style="color:green">/*
+            Functional description of pr3.
+          */</span>
+              p1                                          <span style="color:blue">number</span>    <span style="color:green">--Description of parameter p1</span>
+            , p2                                          <span style="color:blue">number</span>    <span style="color:green">--Description of parameter p2</span>
+        )
+      <span style="color:blue">is
+      begin</span>
+        <span style="color:green">-- TODO: Implementation goes here</span>
+        <span style="color:blue">null;
+      end;</span>
+
+
+
+      <span style="color:green">-- fn3</span>
+      <span style="color:blue">function
+        fn3 (</span>
+          <span style="color:green">/*
+            Functional description of fn3.
+          */</span>
+
+              p1                                          <span style="color:blue">number</span>    <span style="color:green">--describe the parameter p1</span>
+            , p2                                          <span style="color:blue">number</span>    <span style="color:green">--describe the parameter p2</span>
+            , p3                                          <span style="color:blue">varchar2</span>
+        )
+          <span style="color:blue">return
+            number
+      is
+      begin</span>
+        <span style="color:green">-- TODO: Implementation goes here</span>
+        <span style="color:blue">return null;</span>
+      <span style="color:blue">end;
+
+    end;</span>
+    /          
+        </pre>
   </div>
 
   <!-- SSM manual edit starts -->

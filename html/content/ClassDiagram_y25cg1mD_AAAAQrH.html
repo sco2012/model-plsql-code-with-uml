@@ -14,26 +14,37 @@
 <body onload="initPage();initDiagram();initGridDiagram();"
   style="margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;width:1000px;">
 
+  <!-- SSM manual edit starts -->
+ 
   <p class="PageTitle"><span id="PageTitleText">
       Returning ref_cursors, part 3</span></p>
-  <div style="position: relative; padding-bottom: 20px;">
-    <table border="0" cellpadding="0" cellspacing="0"
-      onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),hideLinkPopup(),hideReferencedBys();"
-      style="position: absolute; top: 0; left: 0; z-index: 20;" width="100%">
-    </table>
-    <table border="0" cellpadding="0" cellspacing="0" style="position: relative; top: 24;" width="100%">
-      <tbody>
-        <tr>
-          <td class="TableContent">
-            <img class="Image"  id="diagram" src="../images/Returning_ref_cursors_part_3.png"
-              usemap="#diagram_map" width="900"> <map id="diagram_map" name="diagram_map"></map>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
 
-  <!-- SSM manual edit starts -->
+  <div class="TableContent" style="max-width:760px; font-size:16px;">
+
+      <p>
+        <span style="font-weight: bold;">
+          Method #2: SQL requires strongly-types data
+        </span>
+      </p>
+  </div>  
+  
+  <pre>
+      <span style="color:green">Strong-type wrapper for fn4RefC() that allows the form ::</span>
+
+          <span style="color:blue">select</span>
+                *
+          <span style="color:blue">from</span>
+                xxschema."xxpub2".fn4(
+                      xxschema."xxpub2".fn4RefC(
+                            p1 => ??, p2 => ??
+                      )
+                )
+          ;
+
+      <span style="color:green">Because this function returns a pipe-lined function it can not be called over a database link.</span>
+    
+  </pre>
+
   <div class="TableContent" style="max-width:760px; font-size:16px;">
     <p>
       A ref-cursor can not be accessed directly with SQL, because a ref-cursor is not strongly-typed, and SQL requires 

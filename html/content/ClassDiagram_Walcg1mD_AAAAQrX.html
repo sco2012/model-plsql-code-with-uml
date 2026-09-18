@@ -16,23 +16,44 @@
 
   <p class="PageTitle"><span id="PageTitleText">
       Returning ref_cursors, part 4</span></p>
-  <div style="position: relative; padding-bottom: 20px;">
-    <table border="0" cellpadding="0" cellspacing="0"
-      onmouseover="hideReferenceIcon(),hideSubdiagramIcon(),hideTransitorIcon(),hideLinkPopup(),hideReferencedBys();"
-      style="position: absolute; top: 0; left: 0; z-index: 20;" width="100%">
-    </table>
-    <table border="0" cellpadding="0" cellspacing="0" style="position: relative; top: 24;" width="100%">
-      <tbody>
-        <tr>
-          <td class="TableContent">
-            <img class="Image" id="diagram" src="../images/Returning_ref_cursors_part_4.png"
-              usemap="#diagram_map" width="900"> <map id="diagram_map" name="diagram_map"></map>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
 
+  <!-- SSM manual edit starts -->
+ 
+  <div class="TableContent" style="max-width:760px; font-size:16px;">
+
+      <p>
+        <span style="font-weight: bold;">
+          Method #3: SQL over database link
+        </span>
+      </p>
+  </div>  
+  
+  <pre>
+
+      <span style="color:green">Wrapper that allows the results of fn4RefC() to be fetched using the form ::</span>
+
+          <span style="color:blue">select</span>
+                *
+          <span style="color:blue">from</span>
+                fn4
+          <span style="color:blue">where</span>
+                xxschema."xxpub2".Setfn4(p1 => ??, p2 => ??) = 1 ;
+
+      <span style="color:green">Note the use of the conjunctive function Setfn4()</span>
+
+      <span style="color:green">Allows the function to be executed over a database link ::</span>
+
+          <span style="color:blue">select</span>
+                *
+          <span style="color:blue">from</span>
+                fn4@dblink
+          <span style="color:blue">where</span>
+                xxschema."xxpub2".Setfn4<span style="color:red">@</span>(p1 => ??, p2 => ??) = 1
+
+      <span style="color:green">Sets filtering criteria (by setting package global variables for the session). Always returns "1"
+
+    
+  </pre>
   <!-- SSM manual edit starts -->
   <div class="TableContent" style="max-width:760px; font-size:16px;">
     <p>
