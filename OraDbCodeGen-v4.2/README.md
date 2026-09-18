@@ -1,4 +1,4 @@
-# OraDbConGen extension for visual-paradigm
+# OraDbCodeGen extension for visual-paradigm
 
 This repo holds the Java code to build a visual-paradigm plugin, which allows for UML class diagrams to be used to generate Oracle database PL/SQL packages.  The plugin has been known to work with all visual-paradigm versions between 2020 and 2026 (version 18.1).
 
