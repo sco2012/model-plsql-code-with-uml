@@ -28,9 +28,11 @@
       A developer might create a query such as:
     </p>
       <div style="max-width:720px;">
-      <pre style="background-color:#7eadd938">
+      <pre>
   <span style="color:blue">select</span> f1, f2, f3 <span style="color:blue">from</span> xview <span style="color:blue">where</span> f4=123</pre>
       </div>
+
+      
 
     <p>
       But exposing <span style="font-family: 'Courier New', Courier, monospace;">f4</span> might lead to
@@ -38,12 +40,12 @@
         style="font-family: 'Courier New', Courier, monospace;">f4</span> field to another view or table.
       That can have some undireable consequences:
       <list>
-        <li>
+        <ul>
           Complex SQL finds its way into the application level, instead of being encapsulated at database level.
-        </li>
-        <li>
+        </ul>
+        <ul>
           Optimising query performance becomes difficult for DBAs (when the code is not readily available to DBA to embedd query hints)
-        </li>
+        </ul>
       </list>
     </p>
     <p>
@@ -51,7 +53,7 @@
     </p>
     <p>
       <div style="max-width:720px;">
-        <pre style="background-color:#7eadd938">
+        <pre>
   <span style="color:blue">select</span> f1, f2, f3 <span style="color:blue">from</span></span> <span
         style="color:red">xview_pv</span>(123)</pre>
       </div>
@@ -82,14 +84,12 @@
   <!-- SSM manual edit starts -->
 
   <div style="max-width:720px;">
-    <pre style="background-color:#7eadd938">
+    <pre>
     <span style="color:blue">select</span>
           *
     <span style="color:blue">from</span>
-          xxschema.xxpub2.<span style="color:red">fn4</span>(
-            xxschema.xxpub2.<span style="color:red">fn4RefC</span>(
-              p1 => ??, p2 => ??
-            )
+          xxpv.<span style="color:red">xview</span>(
+            xxpvpub.<span style="color:red">xviewRefC</span>(123)
           )</pre>
   </div>
 
@@ -99,7 +99,7 @@
   <!-- SSM manual edit starts -->
   <div class="TableContent" style="max-width:760px; font-size:16px;">
     <p>
-      The <span style="font-family: 'Courier New', Courier, monospace;">fn4()</span> function, in the above example, is
+      The <span style="font-family: 'Courier New', Courier, monospace;">xview()</span> function, in the above example, is
       an implementation of a parameterized view.
       They allow parameters to operate on parts of the underlying SQL without having to expose those columns.
     </p>
